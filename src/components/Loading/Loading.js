@@ -22,7 +22,9 @@ const Loading = () => {
       ({ item: finished, key, props: { opacity, width } }) =>
         !finished && (
           <a.div className="loading" key={key} style={{ opacity }}>
-           <h1 className="welcome">The Gallery</h1>   
+           <div className="loading-kicker">МУЗЕЙ АКВАРЕЛИ</div>
+           <h1 className="welcome">Сергей Андрияка</h1>
+           <div className="loading-caption">Загрузка экспозиции</div>
             <div className="loading-bar-container">                
               <a.div className="loading-bar" style={{ width }} />
             </div>

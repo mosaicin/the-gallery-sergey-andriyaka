@@ -1,94 +1,63 @@
-# The Gallery
+# Музей акварели Сергея Андрияки
 
 ![app preview](./public/assets/Images/The-Gallery-Preview.jpg)
 
-### View the app online 
+Интерактивная 3D-экспозиция, созданная на основе исходного проекта **The Gallery** Dean Smart. В этой версии галерея переосмыслена как цифровой музей, посвящённый творчеству Сергея Николаевича Андрияки, его педагогике и традиции многослойной акварельной живописи.
 
-Open the live app in your browser with this link: https://deanssmart.github.io/the-gallery/
+> Это независимая творческая адаптация исходного open-source проекта, а не официальный сайт Академии акварели или Музея акварели Сергея Андрияки.
 
-## Intro
+## О Сергее Андрияке
 
-Interactive 3D art gallery to showcase some of my drawings and paintings  
+Сергей Николаевич Андрияка (1958–2024) — российский художник-акварелист, педагог, Народный художник Российской Федерации, академик Российской академии художеств, основатель Школы акварели и ректор Академии акварели и изящных искусств. Его творчество связано с русской архитектурой, историческими городами, пейзажем, натюрмортом, цветами и интерьером.
 
-### Technologies
+Центральной художественной практикой мастера была многослойная акварель: прозрачные лессировочные слои на сухой или влажной бумаге, через которые постепенно формируются свет, объём и глубина. В интерактивной экспозиции эта идея отражена в переходе от затемнённого входного пространства к освещённым залам и в музейных подписях поверх сцены.
 
-- JavaScript
-- Three.js
-- React
-- react-three-fiber
-- JSX
-- HTML/CSS
-- Git (version managed)
-- Blender
+## Возможности
 
-### Functionality and Features
+- Исследование галереи от первого лица.
+- Управление WASD, обзор мышью, бег через SHIFT и прыжок через SPACE.
+- Переключение дневного и ночного освещения клавишей N.
+- Режим снижения нагрузки клавишей P.
+- Входной экран с музейной навигацией, названием экспозиции и справочной панелью.
 
-- First-person view and controls 
-- WASD movement 
-- MOUSE to look
-- SHIFT to run
-- SPACE to fly
-- N to toggle between night and day
-- P to toggle performance
-- More features will be added... so watch this space
+## Запуск локально
 
-### How to Use
-
-- Click the center dot to allow the browser control of your pointer
-- Use W to move forward, A to move left, D to move right and S to move backwards
-- Use the mouse to look in the direction you want to move
-- (If you've played any first-person shooters youll be familliar)
-- Hold SHIFT to run (there is no security guard in this gallery)
-- Hold SPACE to fly (because why not!)
-- Press N at any time to toggle the environment between night and day
-- If you have a slower laptop and the frame rate is a bit low press P, this will turn off all the spotlights on the paintings so should allow the app to runs smoother although it won't look as visually intended 
-- (I intend to bake the lighting at some point in the future)
-
-## Setup on your machine
-
-1. Create a local directory on your machine 
-2. Run the following code in your command line to navigate into that directory:   
-
-```shell 
-$ cd ~/your-directory-name-here
-```
-3. Copy the SSH key from this GitHub repository `git@github.com:deanssmart/the-gallery.git`
-
-4. Run the following code in your command line to clone the repo to your machine (you can change the app-name to what you desire):  
-
-```shell 
-git clone git@github.com:deanssmart/the-gallery.git <app-name>
-```
-5. Navigate to your new app directory (the app name you just picked):
-
-```shell 
-$ cd app-name
-```
-6. Install the dependencies:
-
-```shell 
-npm i
-```
-7. Run the following command to launch the app in your default browser at http://localhost:3000/:
-
-```shell 
+```shell
+npm install
 npm start
 ```
-8. Enjoy
 
-## Credits
+Откройте `http://localhost:3000/` в браузере. Для входа в экспозицию кликните по центральной точке и разрешите управление указателем.
 
-### 3D Models (Sketchfab)
+## Источники музейного контекста
 
-- Adapted fancy picture frame from Jamie McFarlane https://skfb.ly/6QZpO 
-- Adapted square picture frame from Lonit https://skfb.ly/6WMFM
-- Adapted long picture frame from ROOFUSMAN1976 https://skfb.ly/6SKu9
-- Adapted Victorian window from expy https://skfb.ly/6qupO
-- Adapted industrial set from feivelyn https://skfb.ly/6SqIT
-- Parametric benches from decah https://skfb.ly/6qwEw & https://skfb.ly/6qvZD
+- [Музейно-выставочный комплекс Академии акварели и изящных искусств Сергея Андрияки](https://mvk.academy-andriaka.ru/)
+- [Официальная биография Сергея Андрияки](https://school.aaii.ru/about/andriyaka-sergej-nikolaevich.html)
+- [Российская академия художеств: память о Сергее Андрияке](https://rah.ru/events/detail.php?ID=60430)
+- [ТАСС: биография Сергея Андрияки](https://tass.ru/info/20815133)
 
-### Textures
-- Grass texture from Simon Murray https://www.brusheezy.com/textures/20185-seamless-green-grass-textures
-- Marble textures from ShareTextures https://opengameart.org/users/sharetextures
-- Wall texture from Seme Design Lab http://www.texturise.club/2016/12/seamless-white-wall-paint-stucco.html
-- Moon texture from Richard Andersson https://richardandersson.net/?p=331
+## Авторские права и изображения
+
+3D-модели и текстуры сохранены из исходного проекта и перечислены в разделе Credits ниже. В музейной адаптации не заявляются репродукции конкретных произведений Андрияки без отдельного подтверждения прав. Для официальной публикации музейных работ следует заменить демонстрационные изображения на материалы, предоставленные правообладателем, и добавить необходимую атрибуцию.
+
+## Технологии
+
+JavaScript, React 17, Three.js, react-three-fiber, JSX, HTML/CSS, Blender и Git.
+
+## Кредиты исходного проекта
+
+### 3D-модели Sketchfab
+
+- Fancy picture frame — Jamie McFarlane: https://skfb.ly/6QZpO
+- Square picture frame — Lonit: https://skfb.ly/6WMFM
+- Long picture frame — ROOFUSMAN1976: https://skfb.ly/6SKu9
+- Victorian window — expy: https://skfb.ly/6qupO
+- Industrial set — feivelyn: https://skfb.ly/6SqIT
+- Parametric benches — decah: https://skfb.ly/6qwEw и https://skfb.ly/6qvZD
+
+### Текстуры
+
+- Grass texture — Simon Murray: https://www.brusheezy.com/textures/20185-seamless-green-grass-textures
+- Marble textures — ShareTextures: https://opengameart.org/users/sharetextures
+- Wall texture — Seme Design Lab: http://www.texturise.club/2016/12/seamless-white-wall-paint-stucco.html
+- Moon texture — Richard Andersson: https://richardandersson.net/?p=331

@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/the-gallery-sergey-andriyaka/static/css/main.e15bebc1.css",
-    "main.js": "/the-gallery-sergey-andriyaka/static/js/main.35c08284.js",
+    "main.css": "/the-gallery-sergey-andriyaka/static/css/main.52207070.css",
+    "main.js": "/the-gallery-sergey-andriyaka/static/js/main.9a89c075.js",
     "static/js/536.a75438af.chunk.js": "/the-gallery-sergey-andriyaka/static/js/536.a75438af.chunk.js",
     "static/js/422.3837c6a2.chunk.js": "/the-gallery-sergey-andriyaka/static/js/422.3837c6a2.chunk.js",
     "static/media/Sacramento-Regular.ttf": "/the-gallery-sergey-andriyaka/static/media/Sacramento-Regular.8e499a8cb6cdb915c291.ttf",
     "index.html": "/the-gallery-sergey-andriyaka/index.html",
-    "main.e15bebc1.css.map": "/the-gallery-sergey-andriyaka/static/css/main.e15bebc1.css.map",
-    "main.35c08284.js.map": "/the-gallery-sergey-andriyaka/static/js/main.35c08284.js.map",
+    "main.52207070.css.map": "/the-gallery-sergey-andriyaka/static/css/main.52207070.css.map",
+    "main.9a89c075.js.map": "/the-gallery-sergey-andriyaka/static/js/main.9a89c075.js.map",
     "536.a75438af.chunk.js.map": "/the-gallery-sergey-andriyaka/static/js/536.a75438af.chunk.js.map",
     "422.3837c6a2.chunk.js.map": "/the-gallery-sergey-andriyaka/static/js/422.3837c6a2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e15bebc1.css",
-    "static/js/main.35c08284.js"
+    "static/css/main.52207070.css",
+    "static/js/main.9a89c075.js"
   ]
 }

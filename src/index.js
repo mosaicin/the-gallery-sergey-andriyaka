@@ -4,6 +4,7 @@ import "./style/css/index.css";
 import App from "./components/App/App";
 import reportWebVitals from "./reportWebVitals";
 import Loading from "./components/Loading/Loading";
+import { USER_EXHIBITION } from "./userExhibition";
 
 /** Museum adaptation: the original pointer-lock gallery remains the spatial frame; this catalog adds a rights-safe index of works listed by the official museum. */
 const SOURCE_URL = "https://mvk.academy-andriaka.ru/exhibitions/sergey-andriyaka/";
@@ -48,6 +49,7 @@ const GROUPS = ["Архитектура и Россия", "Пейзаж", "Цв�
 const Overlay = () => {
   const [ready, setReady] = useState(false);
   const [catalogOpen, setCatalogOpen] = useState(false);
+  const [userExhibitionOpen, setUserExhibitionOpen] = useState(false);
 
   useEffect(() => {
     const handleLockchange = () => setReady(document.pointerLockElement !== null);
@@ -65,7 +67,8 @@ const Overlay = () => {
             <div className="museum-title-block">
               <p className="museum-kicker">Музей акварели</p>
               <h1>Сергей<br />Андрияка</h1>
-              <p className="museum-subtitle">Пространство, посвящённое мастеру многослойной акварели, его школе и красоте русского пейзажа.</p>
+              <img className="entry-art" src={USER_EXHIBITION[0].src} alt="Лесной склон — пользовательская работа" />
+              <p className="museum-subtitle">Временная выставка из предоставленных работ: пейзажи, цветы и материалы из личного архива.</p>
               <div className="entry-rule"><span /></div>
               <div className="start">Войти в экспозицию <span>↓</span></div>
             </div>
@@ -80,7 +83,7 @@ const Overlay = () => {
               <div className="info-line" />
               <span className="info-hint">N — СМЕНА ОСВЕЩЕНИЯ</span>
             </aside>
-            <button className="catalog-toggle" onClick={() => setCatalogOpen(true)}>КАТАЛОГ <strong>33</strong></button>
+            <div className="museum-actions"><button className="catalog-toggle" onClick={() => setCatalogOpen(true)}>АРХИВ <strong>33</strong></button><button className="exhibition-toggle" onClick={() => setUserExhibitionOpen(true)}>ВЫСТАВКА <strong>100</strong></button></div>
           </>
         )}
         <img className={ready ? "hidden-control" : "controlsL"} src="./assets/Images/ControlsL.png" alt="Движение: WASD, прыжок: SPACE, бег: SHIFT" />
@@ -88,6 +91,17 @@ const Overlay = () => {
         <img className={ready ? "hidden-control" : "controlsTR"} src="./assets/Images/ControlsTR.png" alt="Производительность: P, освещение: N" />
       </div>
       <div className="dot" style={{ pointerEvents: ready ? "none" : "all" }} aria-hidden="true" />
+      {userExhibitionOpen && (
+        <section className="user-exhibition-panel" aria-label="Выставка пользовательских работ">
+          <div className="catalog-header">
+            <div><span className="catalog-kicker">ВРЕМЕННАЯ ВЫСТАВКА / ПРЕДОСТАВЛЕННЫЕ РАБОТЫ</span><h2>Тихий склон</h2><p>Три самостоятельные работы открывают выставку. Остальные загруженные материалы сохранены в архиве ниже; названия архивных файлов не интерпретируются как названия произведений.</p></div>
+            <button className="catalog-close" onClick={() => setUserExhibitionOpen(false)} aria-label="Закрыть выставку">×</button>
+          </div>
+          <div className="featured-gallery">{USER_EXHIBITION.slice(0, 3).map((work) => <figure className="featured-work" key={work.id}><img src={work.src} alt={work.title} /><figcaption><span>{work.title}</span><small>{work.kind}</small></figcaption></figure>)}</div>
+          <div className="archive-heading"><span>АРХИВ ЗАГРУЖЕННЫХ МАТЕРИАЛОВ</span><strong>{USER_EXHIBITION.length - 3}</strong></div>
+          <div className="archive-grid">{USER_EXHIBITION.slice(3).map((work) => <figure className="archive-item" key={work.id}><img src={work.src} loading="lazy" alt={work.title} /><figcaption>{work.title}</figcaption></figure>)}</div>
+        </section>
+      )}
       {catalogOpen && (
         <section className="catalog-panel" aria-label="Каталог работ Сергея Андрияки">
           <div className="catalog-header">
